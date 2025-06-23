@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(cors({
-   origin:"https://frontend-eosin-three-pm5edn61o0.vercel.app"
+   origin:"https://music-player-bkmu.vercel.app"
   }));
 
 const SONGS_DIR = path.join(__dirname, 'song');
