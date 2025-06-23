@@ -12,11 +12,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 
-app.use(cors());
-app.use(express.json());
 app.use(cors({
-   origin:"https://music-player-bkmu.vercel.app"
-  }));
+   origin:"https://music-player-bkmu.vercel.app",
+   methods: ["GET", "POST"]
+}));
+app.use(express.json());
 
 const SONGS_DIR = path.join(__dirname, 'song');
 
