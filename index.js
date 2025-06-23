@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 
 app.use(cors());
@@ -66,5 +67,5 @@ app.get('/api/song-duration', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend server running on`);
+  console.log(`Backend server running on port ${PORT}`);
 });
