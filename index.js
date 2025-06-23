@@ -9,10 +9,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 5000;
+
 
 app.use(cors());
 app.use(express.json());
+app.use(cors({
+   origin:"https://frontend-eosin-three-pm5edn61o0.vercel.app"
+  }));
 
 const SONGS_DIR = path.join(__dirname, 'song');
 
@@ -63,5 +66,5 @@ app.get('/api/song-duration', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Backend server running on http://localhost:${PORT}`);
+  console.log(`Backend server running on`);
 });
